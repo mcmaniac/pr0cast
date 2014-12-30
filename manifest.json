@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "pr0-cast",
+  "description": "Chrome cast support for pr0gramm.com",
+  "version": "0.1",
+
+  "permissions": [
+      "*://*.pr0gramm.com/*"
+    ],
+
+  "content_scripts": [
+      {
+
+        "matches": [ "*://pr0gramm.com/"
+                   , "*://pr0gramm.com/top/*"
+                   , "*://pr0gramm.com/new/*"
+                   , "*://pr0gramm.com/user/*/uploads/*"
+                   ],
+
+        "js": [ "lib/jquery-2.1.3.min.js"
+              , "src/loader.js"
+              ]
+      }
+    ],
+
+  "web_accessible_resources": [
+    "src/pr0cast.js",
+    "src/pr0cast.css",
+    "img/ic_media_route_off_holo_dark.png",
+    "img/ic_media_route_on_0_holo_dark.png",
+    "img/ic_media_route_on_1_holo_dark.png",
+    "img/ic_media_route_on_2_holo_dark.png",
+    "img/ic_media_route_on_holo_dark.png"
+    ]
+
+}
